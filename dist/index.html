@@ -35,17 +35,17 @@
       <img
         src="./pngwing 1.png"
         alt=""
-        class="h-[28vh] md:h-[50vh] max-w-full"
+        class="h-[30vh] sm:h-[50vh] md:h-[75vh] lg:h-[80vh] max-w-full"
       />
       <img
         src="./pngwing 1.png"
         alt=""
-        class="h-[35vh] md:h-[70vh] max-w-full"
+        class="h-[35vh] sm:h-[70vh] md:h-[90vh] lg:h-[100vh] max-w-full"
       />
       <img
         src="./pngwing 1.png"
         alt=""
-        class="h-[28vh] md:h-[50vh] max-w-full"
+        class="h-[30vh] sm:h-[50vh] md:h-[75vh] lg:h-[80vh] max-w-full"
       />
     </div>
 
@@ -58,14 +58,29 @@
           placeholder="eg: oppo, samsumg, vivo"
         />
         <button
-          class="bg-blue-700 px-4 py-2 hover:bg-blue-800 rounded-md font-medium"
+          class="bg-blue-700 px-4 py-2 hover:bg-blue-800 rounded-md font-medium searchBtn"
         >
           Search
         </button>
       </div>
     </div>
 
-    <footer>
+    <div class="phonesContainer flex flex-wrap justify-around gap-4">
+      <div class="hidden loader">
+        <p class="text-2xl">Loading...</p>
+        <span class="loading loading-ring loading-lg"></span>
+      </div>
+    </div>
+
+    <div>
+      <button
+        class="bg-blue-700 px-4 py-2 hover:bg-blue-800 rounded-md font-medium showMore hidden"
+      >
+        show More
+      </button>
+    </div>
+
+    <footer class="mt-10">
       <div>
         <svg
           width="50"
