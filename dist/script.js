@@ -41,7 +41,7 @@ async function showData() {
 
                 </p>
                 <div class="card-actions justify-end">
-                <label for="my_modal_6" class="btn showDetail ">open modal</label>
+                <label for="my_modal_6" class="btn showDetail ">Show Details</label>
                 
                 </div>
             </div>
