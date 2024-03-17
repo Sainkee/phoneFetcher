@@ -28,7 +28,7 @@ async function showData() {
     phonesContainer.innerHTML = "";
 
     res.data.forEach((res, index) => {
-      console.log(res);
+      //   console.log(res);
 
       phonesContainer.innerHTML += `
         <div class="card card-compact w-96 bg-base-100 shadow-xl mt-6">
@@ -41,7 +41,8 @@ async function showData() {
 
                 </p>
                 <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Show Detail</button>
+                <label for="my_modal_6" class="btn showDetail ">open modal</label>
+                
                 </div>
             </div>
         </div>`;
@@ -52,4 +53,25 @@ async function showData() {
     console.error("Error fetching data:", error);
   }
 }
+
+phonesContainer.addEventListener("click", function (event) {
+  if (event.target.classList.contains("showDetail")) {
+    console.log(event);
+    let card = event.target.closest(".card");
+
+    // Find the image element within the card
+    let imageElement = card.querySelector("img");
+    let phoneName = card.querySelector(".card-title").innerText;
+    let name = document.querySelector(".name");
+    name.innerText = phoneName;
+
+    // Extract the image source
+    let imageSource = imageElement.src;
+
+    // Update the source of the modelImg element
+    let modelImg = document.querySelector(".modelImg");
+    modelImg.src = imageSource;
+  }
+});
+
 searchBtn.addEventListener("click", showData);
