@@ -1,1 +1,1 @@
-# https://sainkee.github.io/phoneFetcher/
+# https://sainkee.github.io/phoneFetcher/dist
